@@ -1,0 +1,90 @@
+body {
+  font-size: 10px;
+}
+
+header {
+  background-image: url(images/cover.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding-top: 180px;
+  padding-bottom: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+.title1 {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.title2 {
+  margin: 0 auto;
+  font-size: 24px;
+  letter-spacing: 8px;
+  position: relative;
+  width: 250px;
+  z-index: 1;
+}
+
+.title2::before {
+  content: '';
+  width: 240px;
+  height: 3px;
+  background-color: dodgerblue;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  z-index: -1;
+}
+
+main {
+  background-color: #383838;
+}
+
+main img {
+  width: 50px;
+}
+
+main > ul > li {
+  position: relative;
+  width: 250px;
+  height: 120px;
+  padding: 0px;
+  background: #222222;
+  border-radius: 10px;
+}
+
+main > ul > li:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 8px 0 8px 8px;
+  border-color: transparent #222222;
+  display: block;
+  width: 0;
+  z-index: 1;
+  right: -8px;
+  top: 52px;
+}
+
+.year {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1c90ff;
+  text-align: right;
+}
+
+.version {
+  font-size: 13px;
+  color: lightgrey;
+  text-align: right
+}
+
+.description {
+  font-size: 10px;
+  color: #808080;
+}

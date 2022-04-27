@@ -1,5 +1,7 @@
-body {
-  font-size: 10px;
+html, body {
+  font-size: 62.5%;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #383838;
 }
 
 header {
@@ -17,13 +19,13 @@ h1 {
 }
 
 .title1 {
-  font-size: 13px;
+  font-size: 1.3rem;
   margin-bottom: 8px;
 }
 
 .title2 {
   margin: 0 auto;
-  font-size: 24px;
+  font-size: 2.4rem;
   letter-spacing: 8px;
   position: relative;
   width: 250px;
@@ -42,23 +44,37 @@ h1 {
 }
 
 main {
-  background-color: #383838;
+  padding-top: 70px;
 }
 
-main img {
-  width: 50px;
+main > ul > li:nth-child(odd) > img {
+  width: 55px;
+  margin-top: -38px;
+  position: absolute;
+  left: 12px;
+}
+
+main > ul > li:nth-child(even) > img {
+  width: 55px;
+  margin-top: -38px;
+  position: absolute;
+  right: 12px;
 }
 
 main > ul > li {
-  position: relative;
-  width: 250px;
-  height: 120px;
-  padding: 0px;
-  background: #222222;
-  border-radius: 10px;
+  margin: -20px auto;
+  padding: 10px 10px 0 10px;
 }
 
-main > ul > li:after {
+main > ul > li:nth-child(odd) {
+  position: relative;
+  width: 250px;
+  background: #222222;
+  border-radius: 10px;
+  left: -150px;
+}
+
+main > ul > li:nth-child(odd):after {
   content: '';
   position: absolute;
   border-style: solid;
@@ -68,23 +84,118 @@ main > ul > li:after {
   width: 0;
   z-index: 1;
   right: -8px;
-  top: 52px;
+  top: 43%;
 }
 
-.year {
-  font-size: 2.5rem;
+main > ul > li:nth-child(even) {
+  position: relative;
+  width: 250px;
+  background: #222222;
+  border-radius: 10px;
+  left: 153px;
+}
+
+main > ul > li:nth-child(even):before {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 8px 8px 8px 0;
+  border-color: transparent #222222;
+  display: block;
+  width: 0;
+  z-index: 1;
+  right: 270px;
+  top: 43%;
+}
+
+main > ul > li:nth-child(odd) > .year {
+  font-size: 4rem;
   font-weight: 700;
   color: #1c90ff;
   text-align: right;
+  margin-bottom: 5px;
 }
 
-.version {
-  font-size: 13px;
+main > ul > li:nth-child(even) > .year {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #1c90ff;
+  text-align: left;
+  margin-bottom: 5px;
+
+}
+
+main > ul > li:nth-child(odd) > .version {
+  font-size: 1rem;
   color: lightgrey;
-  text-align: right
+  text-align: right;
+  margin-bottom: 13px;
+  padding-right: 3px;
+}
+
+main > ul > li:nth-child(even) > .version {
+  font-size: 1rem;
+  color: lightgrey;
+  text-align: left;
+  margin-bottom: 13px;
+  padding-left: 3px;
 }
 
 .description {
-  font-size: 10px;
+  font-size: 1rem;
   color: #808080;
+  padding: 20px 0 20px 40px;
+  background-color: #111111;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.description ::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #808080;
+  border-radius: 50%;
+  left: 30px;
+}
+
+.description > li {
+  margin: 5px 0;
+}
+
+/* 중앙선 꾸미기 */
+.line {
+  position: absolute;
+  width: 3px;
+  height: 1392px;
+  background-color: dodgerblue;
+  top: 350px;
+  left: 50%;
+}
+
+main > ul > li:nth-child(odd) > .year::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 43%;
+  left: 279px;
+  background-color: #808080;
+  border: 5px solid dodgerblue;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+main > ul > li:nth-child(even) > .year::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 43%;
+  left: -24px;
+  background-color: #808080;
+  border: 5px solid dodgerblue;
+  border-radius: 50%;
+  z-index: 1;
 }

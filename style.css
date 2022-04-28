@@ -45,28 +45,29 @@ h1 {
 
 main {
   padding-top: 70px;
+  position: relative;
 }
 
-main > ul > li:nth-child(odd) > img {
+main > ol > li:nth-child(odd) > img {
   width: 55px;
   margin-top: -38px;
   position: absolute;
   left: 12px;
 }
 
-main > ul > li:nth-child(even) > img {
+main > ol > li:nth-child(even) > img {
   width: 55px;
   margin-top: -38px;
   position: absolute;
   right: 12px;
 }
 
-main > ul > li {
+main > ol > li {
   margin: -20px auto;
   padding: 10px 10px 0 10px;
 }
 
-main > ul > li:nth-child(odd) {
+main > ol > li:nth-child(odd) {
   position: relative;
   width: 250px;
   background: #222222;
@@ -74,7 +75,7 @@ main > ul > li:nth-child(odd) {
   left: -150px;
 }
 
-main > ul > li:nth-child(odd):after {
+main > ol > li:nth-child(odd):after {
   content: '';
   position: absolute;
   border-style: solid;
@@ -87,7 +88,7 @@ main > ul > li:nth-child(odd):after {
   top: 43%;
 }
 
-main > ul > li:nth-child(even) {
+main > ol > li:nth-child(even) {
   position: relative;
   width: 250px;
   background: #222222;
@@ -95,7 +96,7 @@ main > ul > li:nth-child(even) {
   left: 153px;
 }
 
-main > ul > li:nth-child(even):before {
+main > ol > li:nth-child(even):before {
   content: '';
   position: absolute;
   border-style: solid;
@@ -108,7 +109,7 @@ main > ul > li:nth-child(even):before {
   top: 43%;
 }
 
-main > ul > li:nth-child(odd) > .year {
+main > ol > li:nth-child(odd) > .year {
   font-size: 4rem;
   font-weight: 700;
   color: #1c90ff;
@@ -116,7 +117,7 @@ main > ul > li:nth-child(odd) > .year {
   margin-bottom: 5px;
 }
 
-main > ul > li:nth-child(even) > .year {
+main > ol > li:nth-child(even) > .year {
   font-size: 4rem;
   font-weight: 700;
   color: #1c90ff;
@@ -125,7 +126,7 @@ main > ul > li:nth-child(even) > .year {
 
 }
 
-main > ul > li:nth-child(odd) > .version {
+main > ol > li:nth-child(odd) > .version {
   font-size: 1rem;
   color: lightgrey;
   text-align: right;
@@ -133,7 +134,7 @@ main > ul > li:nth-child(odd) > .version {
   padding-right: 3px;
 }
 
-main > ul > li:nth-child(even) > .version {
+main > ol > li:nth-child(even) > .version {
   font-size: 1rem;
   color: lightgrey;
   text-align: left;
@@ -144,37 +145,40 @@ main > ul > li:nth-child(even) > .version {
 .description {
   font-size: 1rem;
   color: #808080;
-  padding: 20px 0 20px 40px;
+  padding: 20px 20px 20px 40px;
+  line-height: 1.3rem;
   background-color: #111111;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  position: relative;
 }
 
 .description ::before {
   content: '';
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   background-color: #808080;
   border-radius: 50%;
-  left: 30px;
+  left: 23px;
+  margin-top: 3px;
 }
 
 .description > li {
-  margin: 5px 0;
+  margin: 3px 0;
 }
 
 /* 중앙선 꾸미기 */
 .line {
   position: absolute;
   width: 3px;
-  height: 1392px;
+  height: 100%;
   background-color: dodgerblue;
-  top: 350px;
+  top: 110px;
   left: 50%;
 }
 
-main > ul > li:nth-child(odd) > .year::after {
+main > ol > li:nth-child(odd) > .year::after {
   content: '';
   position: absolute;
   width: 5px;
@@ -187,7 +191,7 @@ main > ul > li:nth-child(odd) > .year::after {
   z-index: 1;
 }
 
-main > ul > li:nth-child(even) > .year::before {
+main > ol > li:nth-child(even) > .year::before {
   content: '';
   position: absolute;
   width: 5px;
